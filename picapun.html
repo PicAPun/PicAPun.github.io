@@ -1,0 +1,24 @@
+<head>
+   <title>PicAPun</title>
+ </head>
+
+ <body>
+   <h1>Welcome to Meteor!</h1>
+   {{>Template.dynamic template=main}}
+ </body>
+
+ <template name="noImg">
+   <div class="centerblock">
+     <div class="verticalcenter">
+           Insert image here
+     </div>
+     <form action="action">
+       <input type="file" />
+       <input type="submit" value="Submit" id="submitimg">
+     </form>
+   </div>
+ </template>		
+
+ <template name="Img">
+   <img src="{{selectedImage}}" alt="" />
+ </template>
