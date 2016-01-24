@@ -1,3 +1,0 @@
-http://api.icndb.com
-
-http://www.punoftheday.com/
