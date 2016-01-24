@@ -7,6 +7,12 @@ if (Meteor.isClient) {
     });
   });
 
+  Template.main.helpers({
+    pun: function(){
+      return Session.get("pun");
+    }
+  });
+
   Template.main.events({
     'submit #submit-img': function(event) {
       event.preventDefault();
@@ -18,7 +24,7 @@ if (Meteor.isClient) {
         }
         if (result) {}
       });
-      
+
        // call last
       $('img').attr('src', event.target.url.value);
       $('.special').val('');
