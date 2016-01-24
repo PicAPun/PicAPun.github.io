@@ -4,7 +4,8 @@ body, html {
   height: 100%;
 }
 body {
-  background: #66ff87;
+  background: #111;
+  color: #66ff87;
   font-family: 'Arial', sans-serif;
 }
 .vertical-center {
@@ -29,6 +30,9 @@ body {
 h1 {
   font-size: 60px;
 }
+input {
+  color: #111;
+}
 .special {
   width: 200px;
   margin-left: auto;
@@ -39,4 +43,5 @@ h1 {
 img {
   height: 600px;
   width: 600px;
+  font-size: 20px;
 }

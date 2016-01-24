@@ -16,8 +16,10 @@ if (Meteor.isClient) {
         if (error) {
           console.log("error", error);
         }
-        if (result) { }
+        if (result) {}
       });
+      
+       // call last
       $('img').attr('src', event.target.url.value);
       $('.special').val('');
     }
