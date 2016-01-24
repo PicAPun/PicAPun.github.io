@@ -8,7 +8,7 @@ if (Meteor.isClient) {
   });
 
   Template.main.helpers({
-    pun: function(){
+    pun: function() {
       return Session.get("pun");
     }
   });
@@ -25,9 +25,25 @@ if (Meteor.isClient) {
         if (result) {}
       });
 
-       // call last
+      // call last
       $('img').attr('src', event.target.url.value);
       $('.special').val('');
+    },
+    'click .fa-facebook-official': function(event) {
+      Meteor.call('readFile', function(err, data) {
+        if (err) {
+          console.log("error", error);
+        } else {
+
+          // this shit fails for some reason
+          console.log(data);
+          FB.ui({
+            method: 'feed',
+            link: data,
+            caption: 'An example caption',
+          }, function(response) {});
+        }
+      });
     }
   });
 }
@@ -47,7 +63,13 @@ if (Meteor.isServer) {
         if (err) throw err;
         console.log('It\'s saved!');
       });
+    },
+    readFile: function() {
+      fs.readFile('../../../../../url.txt', "utf-8", (err, data) => {
+        if (err) throw err;
+        console.log(data);
+        return data;
+      });
     }
   });
-
 }

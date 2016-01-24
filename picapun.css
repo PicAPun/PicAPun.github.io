@@ -45,3 +45,8 @@ img {
   width: 600px;
   font-size: 20px;
 }
+.fa-facebook-official {
+  color: white;
+  font-size: 60px !important;
+  margin-top: 30px;
+}

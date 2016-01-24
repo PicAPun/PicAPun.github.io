@@ -1,11 +1,29 @@
 <head>
   <title>PicAPun</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 
 <body>
   <div class="center-block">
     {{>Template.dynamic template=main}}
   </div>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '981676611899004',
+        xfbml      : true,
+        version    : 'v2.5'
+      });
+    };
+
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>
 </body>
 
 <template name="main">
@@ -13,11 +31,13 @@
   <h2>Enter image URL</h2>
   <form action="action" id="submit-img">
     <input class="special" type="text" name="url" />
-    <input type="submit" value="Submit" />
+    <input type="submit" value="Generate Pun" />
   </form>
   <img id="background-img" src="" alt="Your image will appear here.">
   <br>
   {{#if pun}}
     {{pun}}
   {{/if}}
+
+    <i class="fa fa-facebook-official"></i>
 </template>
