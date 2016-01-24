@@ -1,23 +1,45 @@
 if (Meteor.isClient) {
 
-  Template.main.helpers({
-    selectedImage: function () {
-      return Session.get('imageSrc');
-    }
+  Meteor.startup(function() {
+    // code to run on client at startup
+    BlazeLayout.render('body', {
+      main: 'main'
+    });
   });
 
   Template.main.events({
-    'submit #submit-img': function (event) {
+    'submit #submit-img': function(event) {
       event.preventDefault();
-      console.log(event.target);
-      Session.set('imageSrc', event.target);
+
+      // write to url.txt
+      Meteor.call("writeFile", event.target.url.value, function(error, result) {
+        if (error) {
+          console.log("error", error);
+        }
+        if (result) { }
+      });
+      $('img').attr('src', event.target.url.value);
+      $('.special').val('');
     }
   });
 }
 
 if (Meteor.isServer) {
-  Meteor.startup(function () {
-    // code to run on server at startup
-    BlazeLayout.render('body', {main: "noImg"});
+
+  // server code
+  Meteor.startup(function() {
+    fs = Npm.require('fs');
   });
+
+  // methods
+  Meteor.methods({
+    writeFile: function(data) {
+      console.log(data);
+      fs.writeFile("../../../../../url.txt", data, (err) => {
+        if (err) throw err;
+        console.log('It\'s saved!');
+      });
+    }
+  });
+
 }
