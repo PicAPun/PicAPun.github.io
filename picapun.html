@@ -1,14 +1,19 @@
 <head>
-  <title>picapun</title>
+  <title>PicAPun</title>
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
-
-  {{> hello}}
+  <div class="center-block">
+    {{>Template.dynamic template=main}}
+  </div>
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="main">
+  <h1>Pic-A-Pun</h1>
+  <h2>Enter image URL</h2>
+  <form action="action" id="submit-img">
+    <input class="special" type="text" name="url" />
+    <input type="submit" value="Submit" />
+  </form>
+  <img src="" alt="">
 </template>

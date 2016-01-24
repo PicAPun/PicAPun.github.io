@@ -1,1 +1,42 @@
 /* CSS declarations go here */
+
+body, html {
+  height: 100%;
+}
+body {
+  background: #66ff87;
+  font-family: 'Arial', sans-serif;
+}
+.vertical-center {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.center-block {
+  text-align: center;
+  margin: 20px;
+}
+h1 {
+  font-size: 60px;
+}
+.special {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+img {
+  height: 600px;
+  width: 600px;
+}
