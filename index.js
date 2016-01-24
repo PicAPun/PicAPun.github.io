@@ -1,4 +1,5 @@
 function run(imgurl) {
+  $('#ide').addClass("hide");
 
   if (!imgurl.includes("http")) {
   	imgurl = "http://" + imgurl;
