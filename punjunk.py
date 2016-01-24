@@ -14,10 +14,6 @@ def binarySearchBool(a, x):
 image = raw_input()
 examples = ['http://i.imgur.com/z3MsU49.jpg', 'http://i.imgur.com/OfQpsOa.jpg']
 
-
-
-
-
 # for x in range(len(result['classes'])):
 #   print result['classes'][x], result['probs'][x]
 
@@ -51,10 +47,7 @@ def givePun(tags):
 		BASE_URL = 'http://www.punoftheday.com/cgi-bin/findpuns.pl?q=' + KEYWORD
 
 		page = urllib.urlopen(BASE_URL).read()
-
-
 		soup = BeautifulSoup(page, "html.parser")
-
 		rawPuns = soup.find_all("td")
 		purePuns = []
 		for i in range(len(rawPuns)):
@@ -66,8 +59,6 @@ def givePun(tags):
 	BASE_URL = 'http://www.punoftheday.com/cgi-bin/findpuns.pl?q=' + KEYWORD
 
 	page = urllib.urlopen(BASE_URL).read()
-
-
 	soup = BeautifulSoup(page, "html.parser")
 
 	rawPuns = soup.find_all("td")
