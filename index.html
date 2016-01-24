@@ -1,32 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Clarifai JavaScript Starter</title>
+  <title>Pic A Pun!</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="index.css">
 
   <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script type="text/javascript" src="index.js"></script>
+
 </head>
 <body>
   <div class="center-block">
-    <h2>Pic-A-Pun</h2>
-	<h3>Enter image URL</h3>
+    <h1>Pic A Pun!</h1>
+  	<h3>Enter image URL</h3>
 
-	<div>
-    	<input type="text" id="imgurl" placeholder="Image URL"/>
-    	<button type="submit" onclick="run($('#imgurl').val())">Get tags!</button>
+    <div>
+      <input type="text" id="imgurl" placeholder="Image URL"/>
+      <button type="submit" onclick="run($('#imgurl').val())">Get tags!</button>
     </div>
-    <br />
-	<img id="background-img" src="" alt="Your image will appear here.">
-    <br />
-	<div id="tags"></div>
 
-    <i class="fa fa-facebook fa-4"></i>
-    <i class="fa fa-twitter fa-5"></i>
+    <br />
+    <img id="background-img" src="" >
+      <br />
+    <div id="tags"></div>
 
+  <br />
+  <br />
+
+<!-- 
+  <i class="fa fa-facebook-official"></i>&nbsp;&nbsp;
+  <i class="fa fa-twitter"></i>
+ -->
+
+  <br />
+  <br />
+  <br />
+
+  <small style=" text-align: center;"> Puns Copyright 1996-2011 <a href="http://www.punoftheday.com">Pun of the Day</a>.</small>
   </div>
+
 
   <script>
     window.fbAsyncInit = function() {

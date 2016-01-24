@@ -8,7 +8,7 @@ body, html {
 
 body {
   background: #111;
-  color: #66ff87;
+  color: white;
   font-family: 'Arial', sans-serif;
 }
 
@@ -50,8 +50,10 @@ input {
 }
 
 img {
-  width: 600px;
-  height: 600px;
+  /*width: 200px;*/
+  /*height: 200px;*/
+  max-width: 600px;
+  max-height: 600px;
   font-size: 20px;
 }
 
@@ -66,7 +68,16 @@ img {
   margin-top: 30px;
 }
 */
+
 #tags {
   font-size: 25px;
   color: white;
+}
+
+.fa:before {
+  font-size: 50px;
+}
+
+a {
+  color: red;
 }
