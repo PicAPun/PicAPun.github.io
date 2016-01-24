@@ -11,7 +11,7 @@ def binarySearchBool(a, x):
         return True
     return False
 
-image = 'http://i.imgur.com/OfQpsOa.jpg'
+image = raw_input()
 examples = ['http://i.imgur.com/z3MsU49.jpg', 'http://i.imgur.com/OfQpsOa.jpg']
 
 
@@ -78,25 +78,9 @@ def givePun(tags):
 	if not purePuns:
 		return purePuns[random.randint(0,len(purePuns)-1)]
 
-from cStringIO import StringIO
-import sys
-
-class Capturing(list):
-    def __enter__(self):
-        self._stdout = sys.stdout
-        sys.stdout = self._stringio = StringIO()
-        return self
-    def __exit__(self, *args):
-        self.extend(self._stringio.getvalue().splitlines())
-        sys.stdout = self._stdout
-
-
-from cStringIO import StringIO
-import sys
-
 def main():
-	global examples
-	toSearch = toClarifai(examples[0])
+	global image
+	toSearch = toClarifai(image)
 	print givePun(toSearch)
 
 main()
