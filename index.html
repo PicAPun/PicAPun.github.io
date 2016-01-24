@@ -4,10 +4,8 @@
   <title>Pic A Pun!</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="index.css">
-
-  <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="index.css">
 
   <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script type="text/javascript" src="index.js"></script>
@@ -16,56 +14,29 @@
 <body>
   <div class="center-block">
     <h1>Pic A Pun!</h1>
-  	<h3>Enter image URL</h3>
+  	<h3>Enter image URL:</h3>
 
- <div class = "row">
-  <div class="col-sm-4 col-sm-offset-4">
-      <div class="input-group">
-        <input type="text" class="form-control" id = "imgurl" placeholder="Image URL">
-        <span class="input-group-btn">
-          <button class="btn btn-default" type="submit" onclick = "run($('#imgurl').val())">Get Pun!</button>
-        </span>
-      </div><!-- /input-group -->
-    </div><!-- /.col-lg-6 -->
-  </div><!-- /.row -->
+    <div class = "row">
+      <div class="col-sm-4 col-sm-offset-4">
+        <div class="input-group">
+          <input type="text" class="form-control" id = "imgurl" placeholder="Image URL">
+          <span class="input-group-btn">
+            <button class="btn btn-success" onclick ="run($('#imgurl').val())">Get Pun!</button>
+          </span>
+        </div>
+      </div>
+    </div>
 
     <br />
     <img id="background-img" src="" >
-      <br />
+    <br />
+    <br />
     <div id="tags"></div>
 
   <br />
   <br />
-
-<!-- 
-  <i class="fa fa-facebook-official"></i>&nbsp;&nbsp;
-  <i class="fa fa-twitter"></i>
- -->
-
   <br />
-  <br />
-  <br />
-
-  <small style=" text-align: center;"> Puns Copyright 1996-2011 <a href="http://www.punoftheday.com">Pun of the Day</a>.</small>
+  <small style=" text-align: center;"> Puns Copyright 1996-2011 <a href="http://www.punoftheday.com">Pun of the Day</a></small>
   </div>
-
-
-  <script>
-    window.fbAsyncInit = function() {
-      FB.init({
-        appId      : '981676611899004',
-        xfbml      : true,
-        version    : 'v2.5'
-      });
-    };
-
-    (function(d, s, id){
-       var js, fjs = d.getElementsByTagName(s)[0];
-       if (d.getElementById(id)) {return;}
-       js = d.createElement(s); js.id = id;
-       js.src = "//connect.facebook.net/en_US/sdk.js";
-       fjs.parentNode.insertBefore(js, fjs);
-     }(document, 'script', 'facebook-jssdk'));
-  </script>  
 </body>
 </html>
