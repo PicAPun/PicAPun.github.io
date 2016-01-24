@@ -1,4 +1,5 @@
 function run(imgurl) {
+  $('#ide').addClass("hide");
 
   if (!imgurl.includes("http")) {
   	imgurl = "http://" + imgurl;
@@ -12,5 +13,5 @@ function run(imgurl) {
     $('#tags').replaceWith("<div id=\"tags\">"+ r +"</div>");
   });
 
-  $('img').attr('src', imgurl);
+  $('#background-img').attr('src', imgurl);
 }
