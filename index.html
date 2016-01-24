@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Clarifai JavaScript Starter</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="index.css">
+
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="clarifai.js"></script>
+</head>
+<body>
+  <div class="center-block">
+    <h2>Pic-A-Pun</h2>
+	<h3>Enter image URL</h3>
+
+	<div>
+    	<input type="text" id="imgurl" placeholder="Image URL"/>
+    	<button type="submit" onclick="run($('#imgurl').val())">Get tags!</button>
+    </div>
+    <br />
+	<img id="background-img" src="" alt="Your image will appear here.">
+    <br />
+	<div id="tags"></div>
+
+    <i class="fa fa-facebook fa-4"></i>
+    <i class="fa fa-twitter fa-5"></i>
+
+  </div>
+
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '981676611899004',
+        xfbml      : true,
+        version    : 'v2.5'
+      });
+    };
+
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>  
+</body>
+</html>
