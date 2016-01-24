@@ -6,6 +6,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="index.css">
 
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
   <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script type="text/javascript" src="index.js"></script>
 
@@ -15,10 +18,22 @@
     <h1>Pic A Pun!</h1>
   	<h3>Enter image URL</h3>
 
-    <div>
+ <div class = "row">
+  <div class="col-sm-6 col-sm-offset-3">
+      <div class="input-group">
+        <input type="text" class="form-control" id = "imgurl" placeholder="Image URL">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="submit" onclick = "run($('#imgurl').val())">Get Pun!</button>
+        </span>
+      </div><!-- /input-group -->
+    </div><!-- /.col-lg-6 -->
+  </div><!-- /.row -->
+    
+
+   <!--  <div>
       <input type="text" id="imgurl" placeholder="Image URL"/>
       <button type="submit" onclick="run($('#imgurl').val())">Get tags!</button>
-    </div>
+    </div> -->
 
     <br />
     <img id="background-img" src="" >
