@@ -1,4 +1,8 @@
 function run(imgurl) {
+
+  if (!imgurl.includes("http")) {
+  	imgurl = "http://" + imgurl;
+  };
   $.ajax({
     url: 'http://162.243.13.61:5000/image',
     data: {imgurl: imgurl},

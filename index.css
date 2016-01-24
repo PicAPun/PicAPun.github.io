@@ -50,8 +50,6 @@ input {
 }
 
 img {
-  /*width: 200px;*/
-  /*height: 200px;*/
   max-width: 600px;
   max-height: 600px;
   font-size: 20px;
@@ -61,13 +59,6 @@ img {
   font-style: italic;
   font-weight: bold;
 }
-
-/*.fa-facebook-official {
-  color: white;
-  font-size: 60px !important;
-  margin-top: 30px;
-}
-*/
 
 #tags {
   font-size: 25px;
